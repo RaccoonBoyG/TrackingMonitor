@@ -5,7 +5,5 @@ from .models import \
     Track, TrackCourse
 
 def upload_from_json(request):
-    if request.method == 'POST':
-        track = json.loads(request.POST.get("json_value", None))
-
+        #track = json.loads(request.POST.get("json_value", None))
         return render(request, 'upload_from_json.html')
