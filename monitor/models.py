@@ -26,7 +26,7 @@ class TrackCourse(models.Model):
     user_id = models.CharField("ИД пользователя", blank=True, null=True, max_length=512)
     org_id  = models.CharField("ИД организации", blank=True, null=True, max_length=512)
     course_id = models.CharField("ИД курса", blank=True, null=True, max_length=512)
-    path = models.CharField("Путь перехода", blank=True, null=True)
+    path = models.TextField("Путь перехода", blank=True, null=True)
 
     def __str__(self):
         return self.course_id
