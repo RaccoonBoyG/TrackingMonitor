@@ -15,8 +15,22 @@ class Track(models.Model):
     time = models.CharField("Время события", blank=True, null=True, max_length=512)
     page = models.CharField("Страница", blank=True, null=True, max_length=512)
 
+    def __str__(self):
+        return f"Трэкинг: {self.host}"
+
+    class Meta:
+        verbose_name = 'Трэкинг'
+        verbose_name_plural = 'Трэкинг'
+
 class TrackCourse(models.Model):
     user_id = models.CharField("ИД пользователя", blank=True, null=True, max_length=512)
     org_id  = models.CharField("ИД организации", blank=True, null=True, max_length=512)
     course_id = models.CharField("ИД курса", blank=True, null=True, max_length=512)
     path = models.CharField("Путь перехода", blank=True, null=True)
+
+    def __str__(self):
+        return self.course_id
+
+    class Meta:
+        verbose_name = 'Трэкинг в курсе'
+        verbose_name_plural = 'Трэкинг в курсе'
