@@ -12,6 +12,7 @@ def upload_from_json(request):
     #track = json.loads(request.POST.get("json_value", None))
     logRDD = sc.textFile("/home/alex/big_data_edx/tracking.log")
     test = logRDD.first()
+    print("!!!!!!!!!!!!!!!! :",test)
     context = {
         'first_obj': test,
     }
