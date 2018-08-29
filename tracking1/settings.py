@@ -164,8 +164,9 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
-
+PYTHONHOME=/home/alex/big_data_edx/venvs/bin/python3
+PYSPARK_PYTHON=python3
+PYSPARK_DRIVER_PYTHON=ipython /home/alex/big_data_edx/venvs/bin/pyspark
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
